@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Artchemist: The World of Arts and Culture</title>
+
+<style>
+
+html {
+
+scroll-behavior: smooth;
+
+}
+
+body {
+
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+margin: 0;
+
+display: flex;
+
+flex-direction: column;
+
+background-color: #f5f5dc;
+
+}
+
+aside {
+
+width: 250px;
+
+background-color: #a52a2a;
+
+padding: 1rem;
+
+color: white;
+
+height: 100vh;
+
+position: fixed;
+
+overflow-y: auto;
+
+}
+
+aside h2 {
+
+font-size: 1.5rem;
+
+margin-top: 0;
+
+}
+
+aside ul {
+
+list-style: none;
+
+padding: 0;
+
+}
+
+aside ul li {
+
+margin: 0.5rem 0;
+
+cursor: pointer;
+
+}
+
+aside ul li ul {
+
+margin-left: 1rem;
+
+display: none;
+
+}
+
+aside ul li a {
+
+color: white;
+
+text-decoration: none;
+
+}
+
+main {
+
+margin-left: 275px;
+
+flex-grow: 1;
+
+padding: 1rem;
+
+text-align: center;
+
+}
+
+header {
+
+background-color: #8b0000;
+
+color: white;
+
+padding: 1rem;
+
+}
+
+header h1 {
+
+margin: 0;
+
+}
+
+.main-thumbnail {
+
+background-color: #ffe4e1;
+
+border: 2px solid #8b0000;
+
+height: 150px;
+
+display: flex;
+
+align-items: center;
+
+justify-content: center;
+
+margin: 1rem auto;
+
+width: 80%;
+
+font-weight: bold;
+
+color: #8b0000;
+
+animation: fadeIn 1.5s;
+
+}
+
+.general-info {
+
+margin-top: 2rem;
+
+}
+
+.thumbnail-grid {
+
+display: grid;
+
+grid-template-columns: repeat(3, 1fr);
+
+gap: 1rem;
+
+margin-top: 1rem;
+
+}
+
+.thumbnail-box {
+
+background-color: #ffe4e1;
+
+border: 2px solid #8b0000;
+
+height: 150px;
+
+display: flex;
+
+align-items: center;
+
+justify-content: center;
+
+font-weight: bold;
+
+color: #8b0000;
+
+text-decoration: none;
+
+animation: fadeIn 1.5s;
+
+}
+
+.thumbnail-box:hover {
+
+background-color: #fdd;
+
+cursor: pointer;
+
+}
+
+a.thumbnail-box {
+
+display: flex;
+
+align-items: center;
+
+justify-content: center;
+
+}
+
+section {
+
+padding: 2rem;
+
+text-align: left;
+
+display: none;
+
+animation: fadeIn 1.5s;
+
+}
+
+section.active {
+
+display: block;
+
+}
+
+section h2 {
+
+color: #8b0000;
+
+}
+
+footer {
+
+background-color: #8b0000;
+
+color: white;
+
+text-align: center;
+
+padding: 1rem;
+
+margin-top: 2rem;
+
+}
+
+#backToTop {
+
+position: fixed;
+
+bottom: 20px;
+
+right: 20px;
+
+background-color: #a52a2a;
+
+color: white;
+
+border: none;
+
+padding: 10px 15px;
+
+border-radius: 5px;
+
+cursor: pointer;
+
+display: none;
+
+z-index: 1000;
+
+}
+
+@keyframes fadeIn {
+
+from { opacity: 0; }
+
+to { opacity: 1; }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<aside>
+
+<h2>Menu</h2>
+
+<ul>
+
+<li><a href="#" onclick="showSection('home')">Home</a></li>
+
+<li onclick="toggleSubmenu('performingArts')">Performing Arts
+
+<ul id="performingArts">
+
+<li><a href="#" onclick="showSection('dance')">Dance</a></li>
+
+<li><a href="#" onclick="showSection('music')">Music</a></li>
+
+<li><a href="#" onclick="showSection('theater')">Theater Arts</a></li>
+
+</ul>
+
+</li>
+
+<li onclick="toggleSubmenu('nonPerformingArts')">Non-Performing Arts
+
+<ul id="nonPerformingArts">
+
+<li><a href="#" onclick="showSection('creativewriting')">Creative Writing</a></li>
+
+<li><a href="#" onclick="showSection('mediaarts')">Media Arts</a></li>
+
+<li><a href="#" onclick="showSection('visualarts')">Visual Arts</a></li>
+
+</ul>
+
+</li>
+
+</ul>
+
+</aside>
+
+<main>
+
+<header id="home">
+
+<h1>Artchemist: The World of Arts and Culture</h1>
+
+<p>Our formula: Art that works</p>
+
+</header>
+
+  <img src="https://i.imgur.com/K6ofyc7.png" alt="My Imgur Image" 
+       style="max-height: 100%; max-width: 100%; object-fit: contain;">
+</div>
+
+<div class="thumbnail-grid">
+
+<a href="#" class="thumbnail-box" onclick="showSection('dance')">Dance</a>
+
+<a href="#" class="thumbnail-box" onclick="showSection('music')">Music</a>
+
+<a href="#" class="thumbnail-box" onclick="showSection('theater')">Theater Arts</a>
+
+<a href="#" class="thumbnail-box" onclick="showSection('creativewriting')">Creative Writing</a>
+
+<a href="#" class="thumbnail-box" onclick="showSection('mediaarts')">Media Arts</a>
+
+<a href="#" class="thumbnail-box" onclick="showSection('visualarts')">Visual Arts</a>
+
+</div>
+
+</div>
+
+
+<section id="dance">
+
+<h2>Dance</h2>
+
+<h1>What is Dance?</h1>
+
+<p>Dance is an art form that involves the movement of the body, typically rhythmically and to music, in a given space. It is often used as a form of expression, social interaction, or spiritual ritual. Dance can serve multiple purposes, such as storytelling, entertainment, or cultural expression, and varies greatly across different societies and traditions. It combines physical movement, creativity, and often, emotions conveyed through gestures, postures, and steps.</p>
+
+
+<h2>History of Dance</h2>
+
+<p>The history of dance is as old as humanity itself. Evidence of dance can be found in ancient art and artifacts from around the world.</p>
+
+<ul>
+
+<li><strong>Prehistoric Origins:</strong> The earliest evidence of dance comes from cave paintings in India dating back to around 8000 BCE and Egyptian tomb paintings from around 3300 BCE. These early dances were likely connected to rituals, ceremonies, and storytelling.</li>
+
+<li><strong>Ancient Civilizations:</strong> Dance played a significant role in the cultures of ancient Greece, where it was associated with religious festivals, theater, and social gatherings. In India, classical dance forms like Bharatanatyam developed within religious and spiritual contexts. In China, dance was part of court rituals, folk celebrations, and theatrical performances.</li>
+
+<li><strong>Development of Western Dance:</strong> In Europe, folk dances evolved into social dances during the Middle Ages and Renaissance. Ballet emerged in the Italian Renaissance courts and later developed into a distinct art form in France during the 17th century.</li>
+
+<li><strong>20th Century and Beyond:</strong> The 20th century saw the rise of new dance forms, such as modern dance, which rejected the strict rules of classical ballet and emphasized individual expression. Jazz dance evolved alongside jazz music, incorporating African American rhythms and movements. In the latter half of the 20th century, hip-hop dance emerged from urban communities in the United States, becoming a global phenomenon.</li>
+
+</ul>
+
+
+<h2>Genres in Dance</h2>
+
+<p>Dance encompasses a vast and diverse range of genres, each with its unique characteristics, techniques, and cultural influences.</p>
+
+<ul>
+
+<li><strong>Ballet:</strong> A classical dance form that originated in the Italian Renaissance and developed in France and Russia. It is characterized by its emphasis on precise, graceful movements, formalized steps, and storytelling through choreography.</li>
+
+<li><strong>Modern Dance:</strong> A broad genre that developed in the early 20th century as a reaction against the rigid conventions of classical ballet. It emphasizes freedom of expression, natural movement, and exploration of the dancer's relationship with gravity and space.</li>
+
+<li><strong>Jazz Dance:</strong> A dynamic and energetic style that evolved alongside jazz music in the early 20th century. It incorporates elements of ballet, modern, and African American vernacular dance, emphasizing rhythm, improvisation, and syncopation.</li>
+
+<li><strong>Hip Hop Dance:</strong> A street dance style that originated in African American and Latino communities in New York City in the 1970s. It encompasses a range of styles, including breaking, locking, popping, and krumping, and is characterized by its rhythmic movements, improvisation, and self-expression.</li>
+
+<li><strong>Ballroom Dance:</strong> A partner dance form that originated in Europe and developed into both social and competitive dance. It encompasses two main subgenres: Standard/Smooth (e.g., Waltz, Tango, Foxtrot) and Latin/Rhythm (e.g., Cha-cha-cha, Samba, Rumba).</li>
+
+<li><strong>Tap Dance:</strong> A percussive dance form in which dancers wear shoes fitted with metal taps and use their feet to create rhythmic sounds on the floor.</li>
+
+<li><strong>Folk Dance:</strong> Traditional dances that reflect the cultural heritage, customs, and social life of a particular community or region.</li>
+
+</ul>
+
+
+<h2>References</h2>
+
+<ul>
+
+<li><a href="https://www.masterclass.com/articles/history-of-dance">MasterClass. (2025, February 😎. History of dance: Universal elements and types of dance.</a></li>
+
+<li><a href="https://en.wikipedia.org/wiki/History_of_dance">Wikipedia. (n.d.). History of dance.</a></li>
+
+<li><a href="https://www.redbull.com/ie-en/history-of-dance">Red Bull. (n.d.). The history of dance: Breaking down everything you never thought to ask.</a></li>
+
+<li><a href="https://uk.harlequinfloors.com/en/news/popular-types-of-dance-list-of-top-dance-genres/">Harlequin Floors. (n.d.). Popular types of dance | List of top dance genres.</a></li>
+
+<li><a href="https://www.rockstaracademy.com/blog/10-popular-types-of-dance-you-might-want-to-explore">Rockstar Academy. (n.d.). 10 popular types of dance you might want to explore.</a></li>
+
+<li><a href="https://inspirationsdancewear.com/blogs/dance-news/the-top-10-types-of-dance">Inspirations Dancewear Canada. (n.d.). The top 10 types of dance.</a></li>
+
+</section>
+
+
+<section id="music">
+
+<h2>Music</h2>
+
+<h1>What is Music?</h1>
+
+<p>Music is an art form that uses sound organized in time. It encompasses melody, harmony, rhythm, and timbre, and can evoke emotions, convey ideas, and create cultural experiences. It is a universal human phenomenon, found in every known culture, and takes a vast array of forms and styles.</p>
+
+
+<h2>History of Music</h2>
+
+<p>The history of music is as old as humanity itself, with evidence suggesting musical practices in prehistoric times.</p>
+
+<ul>
+
+<li><strong>Prehistoric Music (c. 50,000 BCE - 3,000 BCE):</strong> While concrete evidence is scarce, archaeological findings of bone flutes and other instruments suggest that early humans engaged in musical activities, likely for rituals, communication, and entertainment.</li>
+
+<li><strong>Ancient Music (c. 3,000 BCE - 500 CE):</strong> Civilizations like Mesopotamia, Egypt, Greece, and Rome developed their own musical systems and instruments. Ancient Greek music, for example, was integral to theater, religious ceremonies, and philosophical thought, and its theories influenced Western music.</li>
+
+<li><strong>Medieval Music (c. 500 CE - 1400 CE):</strong> In Europe, music was largely dominated by the Church. Gregorian chant, a monophonic vocal form, was prominent. Later, polyphony (music with multiple independent melodic lines) emerged, marking a significant development.</li>
+
+<li><strong>Renaissance Music (c. 1400 CE - 1600 CE):</strong> This era saw a flourishing of polyphony and the development of new musical forms like the motet and the madrigal. Instrumental music also gained importance.</li>
+
+<li><strong>Baroque Music (c. 1600 CE - 1750 CE):</strong> Characterized by elaborate ornamentation, dramatic expression, and the rise of opera, the concerto, and the sonata. Key composers include Bach, Handel, and Vivaldi.</li>
+
+<li><strong>Classical Music (c. 1750 CE - 1820 CE):</strong> Emphasized clarity, balance, and formal structure, as seen in the symphonies, concertos, and sonatas of composers like Mozart, Haydn, and Beethoven (who also bridged the gap to the Romantic era).</li>
+
+<li><strong>Romantic Music (c. 1820 CE - 1900 CE):</strong> Focused on emotional expression, individualism, and programmatic music (music that tells a story or depicts a scene). Prominent composers include Schubert, Chopin, Brahms, and Tchaikovsky.</li>
+
+<li><strong>20th Century and Contemporary Music (c. 1900 CE - Present):</strong> A period of radical experimentation and diversification, with the emergence of atonality, serialism, electronic music, and a vast array of popular genres. Composers like Stravinsky, Schoenberg, and Debussy pushed traditional boundaries.</li>
+
+</ul>
+
+
+<h2>Different Genres of Music</h2>
+
+<p>Music encompasses a broad spectrum of genres, each with unique characteristics, history, and cultural significance:</p>
+
+<ul>
+
+<li><strong>Classical Music:</strong> Art music rooted in Western traditions, typically performed in concert halls. Includes orchestral, chamber, opera, and choral music.</li>
+
+<li><strong>Folk Music:</strong> Traditional music passed down through generations, often reflecting the customs of a particular culture or community.</li>
+
+<li><strong>Popular Music:</strong> Created for a broad audience, known for catchy melodies and wide appeal. Includes many subgenres.</li>
+
+<li><strong>Rock Music:</strong> Developed from blues and rock and roll, features electric instruments and energetic performance. Subgenres include punk, alternative, and metal.</li>
+
+<li><strong>Electronic Music:</strong> Created using electronic instruments and technology. Subgenres include ambient, techno, house, and dubstep.</li>
+
+<li><strong>Jazz:</strong> Known for improvisation, syncopation, and swing. Subgenres include bebop, swing, and fusion.</li>
+
+<li><strong>Blues:</strong> Originated in African American communities, often expressing themes of struggle and resilience.</li>
+
+<li><strong>Hip Hop:</strong> Combines rapping, DJing, and beat production, emerging as a cultural movement with deep roots in urban communities.</li>
+
+<li><strong>Country Music:</strong> Focuses on storytelling and rural life, using acoustic instruments like the guitar and banjo.</li>
+
+<li><strong>World Music:</strong> Encompasses traditional and contemporary music from non-Western cultures.</li>
+
+<li><strong>Religious Music:</strong> Composed for worship or spiritual expression, found in many traditions around the world.</li>
+
+<li><strong>Experimental Music:</strong> Challenges conventional structures and explores new techniques and sounds.</li>
+
+</ul>
+
+
+<h2>References</h2>
+
+<ul>
+
+<li><a href="https://en.wikipedia.org/wiki/Music">"Music" - Wikipedia</a></li>
+
+<li><a href="https://en.wikipedia.org/wiki/History_of_music">"History of Music" - Wikipedia</a></li>
+
+<li><a href="https://www.allmusic.com/genres">"Music Genres List" - AllMusic</a></li>
+
+<li><a href="https://www.open.edu/openlearn/ocw/mod/oucontent/view.php?id=85891&section=1">"What is Music?" - OpenLearn (The Open University)</a></li>
+
+<li><a href="https://www.thoughtco.com/brief-history-of-western-music-2456271">"A Brief History of Western Music" - ThoughtCo</a></li>
+
+</ul>
+
+
+</body>
+
+</html>
+
+
+</section>
+
+
+
+<section id="theater">
+
+<h2>Theater Arts</h2>
+
+<h1>What is Theater Arts?</h1>
+
+<p>Theater Arts is a branch of performing arts that focuses on the creation and performance of stories through live acting on stage. It combines various artistic disciplines including scriptwriting, directing, acting, stage design, lighting, sound, and costume design. It is a powerful medium of storytelling that reflects, critiques, and celebrates the human experience.</p>
+
+
+<h2>History of Theater</h2>
+
+<p>The history of theater dates back to ancient civilizations.</p>
+
+<ul>
+
+<li><strong>Ancient Theater (c. 500 BCE):</strong> Theater originated in Ancient Greece with dramatic festivals honoring the god Dionysus. Playwrights like Sophocles, Aeschylus, and Euripides pioneered tragedy and comedy genres. The Romans later adapted Greek theater, emphasizing spectacle and entertainment.</li>
+
+<li><strong>Medieval Theater (5th–15th centuries):</strong> Theater declined after the fall of the Roman Empire but was revived through liturgical drama performed in churches. These plays gradually moved to marketplaces and town squares, evolving into morality plays, mystery plays, and miracle plays.</li>
+
+<li><strong>Renaissance Theater (14th–17th centuries):</strong> Theater flourished with the rise of professional playwrights and companies. In England, William Shakespeare’s works became the foundation of English drama. Italian theater developed the commedia dell'arte, a form of improvisational comedy.</li>
+
+<li><strong>18th–19th Century Theater:</strong> Theaters became more formal institutions. Realism and melodrama grew in popularity, and innovations in stagecraft and lighting enhanced productions. Notable playwrights include Henrik Ibsen and Anton Chekhov.</li>
+
+<li><strong>20th Century to Present:</strong> Theater expanded into experimental and political forms. Movements like absurdism, expressionism, and musical theater emerged. Broadway and West End became major centers. Today, theater continues to evolve with multimedia and immersive experiences.</li>
+
+</ul>
+
+
+<h2>Different Genres of Theater</h2>
+
+<p>There are many different genres of theater, each with its unique characteristics and purpose:</p>
+
+<ul>
+
+<li><strong>Tragedy:</strong> Focuses on human suffering and often ends unhappily. Examples include Shakespeare's Hamlet and Sophocles' Oedipus Rex.</li>
+
+<li><strong>Comedy:</strong> Aims to entertain and amuse, often featuring misunderstandings, satire, and happy endings. Includes romantic and slapstick comedy.</li>
+
+<li><strong>Drama:</strong> A serious narrative that explores intense character development and realistic conflict.</li>
+
+<li><strong>Musical Theater:</strong> Combines acting, singing, and dancing. Examples include Les Misérables, The Phantom of the Opera, and Hamilton.</li>
+
+<li><strong>Improvisational Theater:</strong> Unscripted performances driven by audience suggestions or spontaneous dialogue.</li>
+
+<li><strong>Experimental Theater:</strong> Breaks traditional rules and explores new formats, spaces, and audience interaction.</li>
+
+<li><strong>Political Theater:</strong> Aims to inspire social change or critique political systems.</li>
+
+<li><strong>Pantomime:</strong> Typically comedic and musical, performed especially during holidays, with exaggerated characters and audience participation.</li>
+
+</ul>
+
+
+<h2>References</h2>
+
+<ul>
+
+<li><a href="https://en.wikipedia.org/wiki/Theatre">"Theatre" - Wikipedia</a></li>
+
+<li><a href="https://www.britannica.com/art/theater-art">"Theater Art" - Britannica</a></li>
+
+<li><a href="https://www.talktheatretome.com/a-brief-history-of-theatre/">"A Brief History of Theatre" - Talk Theatre To Me</a></li>
+
+<li><a href="https://www.masterclass.com/articles/types-of-theater-genres">"Types of Theatre Genres" - MasterClass</a></li>
+
+</ul>
+
+</section>
+
+
+
+<section id="creativewriting">
+
+<h2>Creative Writing</h2>
+
+<h1>What is Creative Writing?</h1>
+
+<p>
+
+Creative writing refers to imaginative and original writing that expresses ideas and emotions in a unique, often artistic way. Unlike technical or academic writing, it prioritizes narrative craft, character development, and the use of literary devices. It includes both fiction and nonfiction, focusing on storytelling, aesthetics, and personal voice.
+
+</p>
+
+
+<h2>History of Creative Writing</h2>
+
+<ul>
+
+<li><strong>Ancient Origins:</strong> Creative writing dates back to ancient civilizations. Epic poetry like <em>The Epic of Gilgamesh</em> (Mesopotamia), <em>The Iliad</em> and <em>The Odyssey</em> (Greece), and ancient Indian and Chinese texts are early examples of storytelling and poetic expression.</li>
+
+<li><strong>Medieval to Renaissance (500–1600s):</strong> Storytelling flourished in religious texts, folk tales, and early dramas. During the Renaissance, writers like Shakespeare, Cervantes, and Dante elevated literary expression with plays, epics, and sonnets.</li>
+
+<li><strong>18th–19th Century:</strong> The rise of the novel brought forward writers like Jane Austen, Charles Dickens, and Edgar Allan Poe. Romantic and realist movements allowed writers to explore inner emotions and societal critique through fiction and poetry.</li>
+
+<li><strong>20th Century to Present:</strong> Modernism and postmodernism sparked experimentation with structure, language, and theme. Writers like Virginia Woolf, James Joyce, and Toni Morrison pushed boundaries. Today, creative writing spans across digital platforms, film scripts, spoken word, and more.</li>
+
+</ul>
+
+
+<h2>Genres of Creative Writing</h2>
+
+<p>The four primary genres of creative writing are:</p>
+
+<ul>
+
+<li><strong>Fiction:</strong> Imaginative works that tell stories, including novels, short stories, and novellas.</li>
+
+<li><strong>Creative Nonfiction:</strong> Nonfictional narratives written in a creative style, such as memoirs and personal essays.</li>
+
+<li><strong>Poetry:</strong> A literary form that expresses ideas and emotions using meter, rhyme, and rhythm.</li>
+
+<li><strong>Drama:</strong> Written works intended for performance, focusing on dialogue, characters, and conflict.</li>
+
+</ul>
+
+
+<h2>References</h2>
+
+<ul>
+
+<li><a href="https://oxfordsummercourses.com/articles/what-is-creative-writing" target="_blank">Oxford Summer Courses: What is Creative Writing?</a></li>
+
+<li><a href="https://study.com/academy/lesson/what-is-creative-writing-definition-types-examples.html" target="_blank">Study.com - What is Creative Writing?</a></li>
+
+<li><a href="https://www.storyboldstudio.com/blog/what-is-creative-writing" target="_blank">StoryBold Studio: What is Creative Writing?</a></li>
+
+<li><a href="https://blackbearreview.ca/writing/writers-den/what-are-the-genres-of-creative-writing" target="_blank">Black Bear Review: Genres of Creative Writing</a></li>
+
+<li><a href="https://link.springer.com/chapter/10.1057/9781137284464_3" target="_blank">Springer Link - Creative Writing Chapter</a></li>
+
+</ul>
+
+</section>
+
+
+
+<section id="mediaarts">
+
+<h2>Media Arts</h2>
+
+<h1>What is Media Arts?</h1>
+
+<p>
+
+The realm of media arts involves the creation of representations of the world and the telling of stories through various communication technologies. These technologies encompass a wide range of platforms, including television, film, video, newspapers, radio, video games, the internet, and mobile media. 
+
+Rather than being a single artistic medium, media arts can be understood as an interdisciplinary approach to the creative process, constantly evolving with emerging technologies. It's about how artists engage with and combine different media in innovative ways to express their ideas, perspectives, and feelings.
+
+</p>
+
+
+<h2>History of Media Arts</h2>
+
+<p>
+
+The history of media arts is an interdisciplinary field that explores the evolution of art alongside technological advancements. While the term "media arts" is relatively recent, the integration of technology into artistic practices dates back to the early 20th century with the invention of film and photography. 
+
+Early pioneers like Marcel Duchamp and Nam June Paik began experimenting with technology in their artwork. 
+
+The 1960s and 70s witnessed a significant surge in interest as artists explored video, sound, and computer technology to forge new modes of expression. 
+
+The advent of personal computers in the 1990s, coupled with advancements in digital technology and the rise of the internet, provided artists with unprecedented creative freedom and new avenues for experiencing art. 
+
+Today, media art history continues to evolve, examining the interplay between art, technology, and science, and highlighting the profound impact of digital technologies on contemporary society and artistic practices.
+
+</p>
+
+
+<h2>Different Genres of Media Arts</h2>
+
+<p>Media arts encompass a diverse range of genres that continue to expand with technological innovation. Some key genres include:</p>
+
+<ul>
+
+<li><strong>Moving Images:</strong> Cinema, video art, animation (cel, computer, stop motion), and video installations.</li>
+
+<li><strong>Imaging Design:</strong> Digital photography and computer graphics.</li>
+
+<li><strong>Sound Design:</strong> Digital recording and the manipulation of audio.</li>
+
+<li><strong>Interactive Design:</strong> Digital and video game design, as well as creative coding.</li>
+
+<li><strong>Virtual and Immersive Art:</strong> Virtual reality, augmented reality, and other immersive technologies.</li>
+
+<li><strong>Internet Art (Net Art):</strong> Art that uses the internet as its medium.</li>
+
+<li><strong>Digital Art:</strong> Includes digital painting, AI-generated art, and AR art.</li>
+
+<li><strong>Multimedia and Intermedia:</strong> Art combining text, audio, still images, animation, video, and interactivity.</li>
+
+<li><strong>Robotics and Cyborg Art:</strong> Incorporates robotics and explores the fusion of humans and technology.</li>
+
+</ul>
+
+
+<h2>References</h2>
+
+<ul>
+
+<li><a href="https://en.wikipedia.org/wiki/Media_art_history" target="_blank">Media Art History - Wikipedia</a></li>
+
+<li><a href="https://jerwoodarts.org/exhibitionsandevents/visual-arts/media-art/" target="_blank">Media Art - Jerwood Visual Arts</a></li>
+
+<li><a href="https://magazine.artland.com/what-is-digital-art/" target="_blank">Digital Art - Artland Magazine</a></li>
+
+<li><a href="https://en.wikipedia.org/wiki/New_media_art" target="_blank">New Media Art - Wikipedia</a></li>
+
+<li><a href="https://www.pbslearningmedia.org/collection/media-arts/" target="_blank">Media Arts Overview - PBS Learning Media</a></li>
+
+</ul>
+
+</section>
+
+
+
+<section id="visualarts">
+
+<h2>Visual Arts</h2>
+
+<h1>What is Visual Arts?</h1>
+
+<p>
+
+Visual arts include a wide range of artistic disciplines, such as painting, sculpture, printmaking, drawing, and photography. These forms of art focus on the creation of works that are primarily visual in nature, often expressing ideas, emotions, or viewpoints through the use of colors, shapes, forms, and textures. Visual arts can be found in various contexts such as galleries, museums, public spaces, and even digital mediums.
+
+</p>
+
+
+<h2>History of Visual Arts</h2>
+
+<p>
+
+The history of visual arts is as long and varied as human history itself, with ancient cultures across the world creating visual works for both practical and symbolic purposes.
+
+</p>
+
+
+<ul>
+
+<li><strong>Prehistoric Art (c. 40,000 BCE - 3,000 BCE):</strong> Early humans created cave paintings, carvings, and sculptures, most famously the paintings in the caves of Lascaux, France. These works were likely tied to ritual or survival.</li>
+
+<li><strong>Ancient Art (c. 3,000 BCE - 500 CE):</strong> In ancient Egypt, Greece, and Rome, visual arts were often created for religious, commemorative, or decorative purposes. Sculptures, pottery, and frescoes from these periods show the cultural values and technological advancements of these civilizations.</li>
+
+<li><strong>Renaissance Art (14th - 17th Century):</strong> A revival of classical ideas, focusing on realism, perspective, and human emotion. Artists like Leonardo da Vinci, Michelangelo, and Raphael transformed the arts during this period.</li>
+
+<li><strong>Modern Art (19th - 20th Century):</strong> Movements such as Impressionism, Cubism, and Surrealism challenged traditional methods and explored new techniques, with artists like Picasso, Van Gogh, and Salvador Dalí.</li>
+
+<li><strong>Contemporary Art (20th Century to Present):</strong> This includes a wide variety of styles, including abstract art, installation art, digital art, and conceptual art. It often focuses on current societal issues and personal expression.</li>
+
+</ul>
+
+
+<h2>Different Genres of Visual Arts</h2>
+
+<ul>
+
+<li><strong>Painting:</strong> The application of pigment to a surface, such as canvas, to create visual representations of objects, ideas, or emotions.</li>
+
+<li><strong>Sculpture:</strong> Three-dimensional artwork created by shaping or combining materials like stone, metal, or wood.</li>
+
+<li><strong>Photography:</strong> Capturing visual images using light and a camera, often to represent reality or create artistic interpretations.</li>
+
+<li><strong>Drawing:</strong> The process of making marks on a surface using tools like pencils, pens, or charcoal to create images or designs.</li>
+
+<li><strong>Printmaking:</strong> The process of creating artworks by printing on paper or fabric, often in limited editions.</li>
+
+<li><strong>Digital Art:</strong> Art that is created or modified using digital technologies like computers, tablets, and graphic software.</li>
+
+</ul>
+
+
+<h2>References</h2>
+
+<ul>
+
+<li><a href="https://en.wikipedia.org/wiki/Visual_arts" target="_blank">"Visual Arts" - Wikipedia</a></li>
+
+<li><a href="https://www.britannica.com/art/visual-arts" target="_blank">"Visual Arts" - Britannica</a></li>
+
+<li><a href="https://www.artsy.net/article/artsy-editorial-brief-history-art" target="_blank">"A History of Art" - Artsy</a></li>
+
+</ul>
+
+</section>
+
+
+
+
+<footer>
+
+<p>&copy; 2025 Artchemist. All rights reserved.</p>
+
+</footer>
+
+</main>
+
+
+<button id="backToTop" onclick="scrollToTop()">Back to Top</button>
+
+
+<script>
+
+function showSection(id) {
+
+document.querySelectorAll('section, header').forEach(sec => sec.classList.remove('active'));
+
+const selected = document.getElementById(id);
+
+if(selected) selected.classList.add('active');
+
+}
+
+
+function toggleSubmenu(menuId) {
+
+const submenu = document.getElementById(menuId);
+
+submenu.style.display = (submenu.style.display === 'block') ? 'none' : 'block';
+
+}
+
+
+function scrollToTop() {
+
+window.scrollTo({top: 0, behavior: 'smooth'});
+
+}
+
+
+window.onscroll = function() {
+
+const backToTop = document.getElementById('backToTop');
+
+if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+
+backToTop.style.display = 'block';
+
+} else {
+
+backToTop.style.display = 'none';
+
+}
+
+};
+
+
+// Show home section on load
+
+document.addEventListener('DOMContentLoaded', () => showSection('home'));
+
+</script>
+
+</body>
+
+</html>
